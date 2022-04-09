@@ -1,4 +1,5 @@
 def rate(plants_list: list, plant: str, rating: int):
+    is_valid = False
     #add the given rating to the plant (store all ratings) - {average_rating}
     for x in plants_list:
         if x['plant'] == plant:
@@ -8,18 +9,29 @@ def rate(plants_list: list, plant: str, rating: int):
             # otherwise, create new one and average_rating
             else:
                 x['rating'] = rating
+            is_valid = True
+    if not is_valid:
+        print('error')
 
 def update(plants_list: list, plant: str, rarity: int):
+    is_valid = False
     #{plant} - {new_rarity} – update the rarity of the plant with the new one
     for x in plants_list:
         if x['plant'] == plant:
             x['rarity'] = rarity
+            is_valid = True
+    if not is_valid:
+        print('error')
 
 def reset(plants_list: list, plant: str):
+    is_valid = False
     # remove all the ratings of the given plant
     for x in plants_list:
         if x['plant'] == plant:
             x['rating'] = 0
+            is_valid = True
+    if not is_valid:
+        print('error')
 
 
 number_of_plant = int(input())
