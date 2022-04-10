@@ -67,6 +67,8 @@ while not command == 'Exhibition':
 
 
     command = input()
+
+sorted_plants = sorted(plants.values(), key=lambda p: (p.rarity, p.rating()), reverse=True)
 print('Plants for the exhibition:')
 for plant in plants:
     print(f"- {plant['plant']}; Rarity: {plant['rarity']}; Rating: {plant['rating']:.2f}")
