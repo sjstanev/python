@@ -5,7 +5,7 @@ cool_threshold_sum = 1
 count_of_emojis = 0
 
 pattern_digit = r'(\d)'
-cool_threshold = re.findall(pattern_digit,text)
+cool_threshold = re.findall(pattern_digit, text)
 for x in cool_threshold:
     cool_threshold_sum *= int(x)
 
