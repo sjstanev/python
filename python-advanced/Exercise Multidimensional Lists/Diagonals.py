@@ -1,18 +1,17 @@
-elements = int(input())
-
 matrix = list()
-for _ in range(elements):
-    matrix.append([x for x in input().split(",")])
+primary_diagonal = list()
+secondary_diagonal = list()
 
-print(len(matrix))
 
-# for index in [row for row in matrix]:
-#     print(index)
-#     #print(matrix[index][index])
-# print(matrix)
-for row in matrix:
-    for col in matrix:
-        if row == col:
-            print(matrix[row][col])
+n = int(input())
 
+for _ in range(n):
+    matrix.append([int(x) for x in input().split(',')])
+
+for i in range(len(matrix)):
+    primary_diagonal.append(matrix[i][i])
+    secondary_diagonal.append(matrix[i][n-1-i])
+
+print(f"Primary diagonal: {', '.join([str(x) for x in primary_diagonal])}. Sum: {sum(primary_diagonal)}")
+print(f"Secondary diagonal: {', '.join([str(x) for x in secondary_diagonal])}. Sum: {sum(secondary_diagonal)}")
 

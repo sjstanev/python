@@ -58,6 +58,8 @@ n = int(input())
 #
 # RESULT:
 # <map object at 0x056D44F0>
+#
+# print(list(x))
 # [5, 6, 6]
 matrix = [map(int, input().split(',')) for _ in range(n)]
 
@@ -93,5 +95,9 @@ print(matrix_v2)
 # create simple list from matrix
 matrix_v3 = [x for row in matrix for x in row ]
 print(matrix_v3)
+
+# it is bad practice to use comprehensions for multidimensional lists
+# since the code becomes messy and unreadable
+[print(num) for num in [j for j in matrix]]
 # -----------------------------------------------------------------------------------
 
