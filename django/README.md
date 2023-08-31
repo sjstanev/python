@@ -120,6 +120,39 @@ Migrating the Entry Model
 python manage.py makemigrations learning_logs_apps
 python manage.py migrate
 ```
+---
+## Making Pages
 
+Making web pages with Django consists of three stages: defining `URLs`, writing `views`, and writing `templates`. 
+You can do these in any order, but in this project we’ll always start by defining the URL pattern. 
+A URL pattern describes the way the URL is laid out. It also tells Django what to look for when matching a browser request with a site URL, so it knows which page to return.
 
+Each `URL` then maps to a particular `view`. The `view` function retrieves and processes the data needed for that page. 
+The `view` function often renders the page using a `template`, which contains the overall structure of the page. 
+Example:
 
+from django.contrib import admin
+from django.urls import path
+
+```
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
+```
+
+The first two lines import the admin module and a function to build URL paths. 
+The body of the file defines the urlpatterns variable. 
+In this `urls.py` file, which defines URLs for the project as a whole, the urlpatterns variable includes sets of URLs from the apps in the project. 
+The list includes the module admin.site.urls, which defines all the URLs that can be requested from the admin site.
+
+To include the URLs for learning_logs_apps, so add the following:
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('learning_logs_apps.urls')),
+]
+
+*We’ve imported the `include()` function, and we’ve also added a line to include the module learning_logs_apps.urls.*
