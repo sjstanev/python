@@ -147,6 +147,7 @@ The list includes the module admin.site.urls, which defines all the URLs that ca
 
 To include the URLs for learning_logs_apps, so add the following:
 
+```
 from django.contrib import admin
 from django.urls import path, include
 
@@ -154,5 +155,44 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('learning_logs_apps.urls')),
 ]
-
+```
 *We’ve imported the `include()` function, and we’ve also added a line to include the module learning_logs_apps.urls.*
+
+Create a new Python file, save it as urls.py in learning_logs, and enter this code into it:
+
+*learning_logs_apps/urls.py*
+
+```
+from django.urls import path
+from . import views
+
+app_name = 'learning_logs_apps'
+urlpatterns = [
+    # Home page
+    path('', views.index, name='index'),
+]
+```
+
+## Writing a View
+
+```
+from django.shortcuts import render
+
+# Create your views here.
+def index(request):
+    """The home page for Learning Log."""
+    return render(request, 'learning_logs_apps/index.html')
+```
+
+## Writing a Template
+The template must be created in the following folders: `learning_logs_apps/templates/learning_logs_apps/index.html`
+
+*index.html*
+```
+<p>Learning Log Apps </p>
+
+<p>Reading and learning Log helps you keep track of your learning, for any topic you're
+interested in.</p>
+```
+In larger projects, it allows individuals working on the project to focus on the areas. For example:
+database specialist can focus on the models, a programmer can focus on the view code, and a frontend specialist can focus on the templates.
