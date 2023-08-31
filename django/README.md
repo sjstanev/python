@@ -15,15 +15,13 @@ cd /home
 mkdir learning_log
 cd learning_log
 ```
-
-## Install Django
 Install python venv and create named virtual environment (ll_venv)
 ```
 apt install python3.11-venv
 python -m venv ll_env
 ```
 
-Activating the Virtual Environment "(ll_env)learning_log$"
+Activating the Virtual Environment `(ll_env)learning_log$`
 ```
 source ll_env/bin/activate
 ```
