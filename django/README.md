@@ -5,6 +5,7 @@
 - [Create Project](#create-project)
 - [View the Project](#view-the-project)
 - [Starting APPs](#starting-apps)
+- [Modify the Database](#modify-the-database)
 
 
 ## Create VENV
@@ -57,5 +58,68 @@ python manage.py runserver 0.0.0.0:8000
 
 ## Starting APPs
 ```
-python manage.py startapp learning_logs
+python manage.py startapp learning_logs_apps
 ```
+
+Add our app to this list by modifying INSTALLED_APPS so it looks like this:
+
+```
+INSTALLED_APPS = [
+    # My apps.
+    'learning_logs_apps',
+
+    # Default django apps.
+    'django.contrib.admin',
+    --snip--
+]
+```
+## Modify the Database
+
+```
+python manage.py makemigrations learning_logs_apps
+python manage.py migrate
+```
+*Whenever we want to modify the data that Learning Log manages, we’ll follow these three steps: modify `models.py`, call `makemigrations` on learning_logs_apps, and tell Django to `migrate` the project.*
+
+---
+
+- [Django Admin Site](#django-admin-site)
+- [Entry Model](#entry-model)
+
+## Django Admin Site
+
+Setting Up a Superuser
+```
+python manage.py createsuperuser
+```
+## Entry Model
+
+```
+from django.db import models
+
+class Topic(models.Model):
+    --snip--
+
+  class Entry(models.Model):
+    """Something specific learned about a topic."""
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
+    text = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'entries'
+
+    def __str__(self):
+        """Return a simple string representing the entry."""
+        return f"{self.text[:50]}..."
+```
+
+
+Migrating the Entry Model
+```
+python manage.py makemigrations learning_logs_apps
+python manage.py migrate
+```
+
+
+
