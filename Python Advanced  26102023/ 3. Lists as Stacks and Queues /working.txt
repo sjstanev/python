@@ -1,0 +1,28 @@
+Stacks -> last in, first out (LIFO)
+Queues -> first in, last out  # wrong
+Priority queue -> mode optimal out
+
+Data Structures
+-----------------------
+#Linear
+    List
+    Queue, Stack
+
+#Hashsets
+    Dictionary
+    Set
+
+#Tree
+
+#Graphs
+-----------------------
+
+Stacks
+    A stack is a linear data structure that stores items  # s = [] - create a empty list | stack
+        push - adding data, to the top of the stack # (s.append(x))
+        pop - retrieving data, the top element      # (s.pop())
+        peek - return the top element               # (print(s.[-1])
+
+        len - count of elements in stack (print(len(s))
+
+        LIFO - last in, first out
