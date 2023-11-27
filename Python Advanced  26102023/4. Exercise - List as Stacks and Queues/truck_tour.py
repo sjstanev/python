@@ -24,7 +24,7 @@ for attempt in range(stations):
             break
 
     if failed:
-        pumps.append(pumps.popleft())
+        pumps.append(pumps.popleft())   # we can use rotate method => pumps.rotate(-1)
     else:
         print(attempt)
         break
