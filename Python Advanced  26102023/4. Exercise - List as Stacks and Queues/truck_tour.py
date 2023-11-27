@@ -17,7 +17,7 @@ for _ in range(stations):
 for attempt in range(stations):
     trunk = 0
     failed = False
-    for petrol, distance in pumps:  # we do unpacking
+    for petrol, distance in pumps:  # we do unpacking the list
         trunk = trunk + petrol - distance
         if trunk < 0:
             failed = True
