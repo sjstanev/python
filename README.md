@@ -1,2 +1,3 @@
-# SoftUni-Courses
-This repo holds courses at SoftUni: homework, exams, projects, exercises...
+# SoftUni-Courses 
+
+This repo holds courses at SoftUni: homework, exams, projects, exercises and etc.
