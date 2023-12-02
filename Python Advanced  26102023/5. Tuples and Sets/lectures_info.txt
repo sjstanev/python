@@ -1,0 +1,54 @@
+Tuples:
+-------------------------------------
+    Tuples are immutable* objects
+        * but the objets, inside the tuples, are mutable
+    Tuples cannot be changed unlike lists
+
+Examples:
+
+t = (1, 2, 3, 4, 5) or t = 1, 2, 3, 4, 5
+print(id(t)) # memory location
+
+t = (1, 2, 3, 4)
+print(id(t))
+
+Methods:
+    There are only two available tuple methods:
+        - count - return the number of times a specified value occurs
+
+            numbers = (1, 2, 1, 3, 1)
+            numbers.count(1) # result = 3
+
+        - index - returns the index of a particular element
+            names = ("Pesho", "Gosho", "Gosho")
+            names.index("Gosho") # result = 1
+
+            names.index("Gosho", 1) # from 1-st index direction right
+                result would be 2
+
+Unpacking:
+ t = ( 1, 4, 6)
+ x, y, z  = t # x = 1, y = 4, z = 6
+
+ Enumerate:
+ t = list(range(5, 16))
+ for index, value in enumerate(t): # unpack the list using unpacking to obtain `index` and `values`
+    print(f' tuple[{index}] = {value}')
+
+ *NO SUCH THING AS TUPLE COMPREHENSION, THIS IS GENERATOR
+ -------------------------------------------
+
+   * but the objets, inside the tuples, are mutable
+
+   tt = (
+    [1, 2, 3]
+    {}
+    (5, 5, 6)
+   )
+   print(tt) # ([1, 2, 3], {}, (5, 5, 6))
+
+   tt[0].append(-4) and tt[1]['key'] = 'new_value' #     print(tt) # ([1, 2, 3, -4], {'key':'new_value'}, (5, 5, 6))
+
+   -------------------------------------------
+   -------------------------------------------
+   Sets ( множества )
