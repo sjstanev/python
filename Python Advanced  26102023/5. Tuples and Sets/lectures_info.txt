@@ -52,3 +52,75 @@ Unpacking:
    -------------------------------------------
    -------------------------------------------
    Sets ( множества )
+
+    -   Search, add, remove is very, very fast
+    -   Contains only unique values
+        -*unique value (with hash tables)
+    -   Unordered   (with tree)
+
+    ss = {1, 2, 3, 4, 5}
+    print(ss)
+    [ss.add(1) for _ in range (1024)
+    print(ss) # this will confirm that the set contains only unique values
+
+    # this is a dictionary not a set
+    dictionary = {
+        '1': 1,
+        '2': 2,
+        '3': 3,
+        '4': 4,
+        '5': 5,
+    }
+
+        - to create a empty set use:
+         ss = set()
+
+
+    # add
+    ss.add(8)
+
+    # remove
+    ss.remove(8)
+
+    # check if value is in set
+    print(4 in ss)
+    print(5 in ss)
+
+
+    Example show how faster is set :
+    ----------------------------------------------------
+    import time
+
+    ll = list(range(1024 * 32))
+    ss = set(ll)
+
+    result = False
+    start = time.time()
+    for v in ss:
+        result = v in ss
+    end = time.time()
+    print(f'Set: {end - start} s'
+
+
+    result = False
+    start = time.time()
+    for v in ll:
+        result = v in ll
+    end = time.time()
+    print(f'Set: {end - start} s'
+    ----------------------------------------------------
+
+    Operators:
+    a = set([1, 2, 3, 4])
+    b = set(3, 4, 5, 6])
+
+    a | b # Union        -> {1, 2, 3, 4, 5, 6}
+    a & b # Intersection -> {3, 4}
+    a < b # Subset (issubset)       -> False
+    a - b # Difference   -> {1, 2}
+
+    Set Comprehension
+        Set comprehension are pretty similar to list comprehension, the only difference is set use curly braces
+        nums = [1, 2, 3, 4, 4, 5, 6, 2, 1]
+        unique = {num for num in nums}
+        # {1, 2, 3, 4, 5, 6}
