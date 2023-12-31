@@ -38,10 +38,10 @@ while True:
         person = people.popleft()
         water_wanted = int(command)
 
-    if water_wanted <= water_quantity:
-        print(f'{person} got wait')
-        water_quantity -= water_wanted
-    else:
-        print(f'{person} must wait')
+        if water_wanted <= water_quantity:
+            print(f'{person} got water')
+            water_quantity -= water_wanted
+        else:
+            print(f'{person} must wait')
 
-print(f'{water_quantity} litters left')
+print(f'{water_quantity} liters left')
