@@ -8,7 +8,7 @@ Start
 refill 1
 1
 End
-
+----------------
 Output:
 Peter got water
 Amy got water
