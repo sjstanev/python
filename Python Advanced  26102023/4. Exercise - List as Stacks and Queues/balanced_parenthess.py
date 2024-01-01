@@ -1,3 +1,5 @@
+# BALANCED PARENTHESES
+
 expression = input()
 
 opening_brackets = []
