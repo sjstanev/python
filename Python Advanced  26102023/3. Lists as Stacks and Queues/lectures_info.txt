@@ -45,7 +45,7 @@ Queue
 
         # Enqueue, push, add
             q.append(1)         # q.popleft()
-            q.appendleft(2)     # q.pop()
+            q. appendleft(2)     # q.pop()
 
         # Dequeue, remove, pop
             q.popleft()
