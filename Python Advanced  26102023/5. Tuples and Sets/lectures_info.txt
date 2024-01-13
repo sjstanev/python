@@ -60,7 +60,7 @@ Unpacking:
 
     ss = {1, 2, 3, 4, 5}
     print(ss)
-    [ss.add(1) for _ in range (1024)
+    [ss.add(1) for _ in range (1024)]
     print(ss) # this will confirm that the set contains only unique values
 
     # this is a dictionary not a set
