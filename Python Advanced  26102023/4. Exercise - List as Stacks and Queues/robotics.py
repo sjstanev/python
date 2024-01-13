@@ -68,7 +68,7 @@ def time_in_seconds_def(time_str):
 def time_to_string_def(seconds):
     seconds = seconds % (24 * 3600)
     hour = seconds // 3600
-    seconds %= 3600
+    seconds %= 3600  # second = second % 3600
     minutes = seconds // 60
     seconds %= 60
 
