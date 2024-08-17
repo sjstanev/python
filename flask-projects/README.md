@@ -8,7 +8,7 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-# isntall flask
+# install flask
 ```
 pip install flask
 ```
@@ -17,3 +17,6 @@ pip install flask
 ```
 touch app.py
 ```
+
+....
+well done!
