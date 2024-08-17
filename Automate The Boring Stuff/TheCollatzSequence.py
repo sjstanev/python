@@ -18,5 +18,5 @@ while True:
 
         if collatz_number == 1:
             break
-    except:
+    except ValueError:
         print('must enter an integer')
