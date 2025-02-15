@@ -25,3 +25,5 @@ def swap(matrix , row1, col1, row2, col2):
 
 print(matrix)
 print('swapped matrix: ', swap(matrix, 0, 0, 1, 1))
+
+# Some probes
