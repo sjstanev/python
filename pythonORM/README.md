@@ -162,15 +162,16 @@ To include an app in a project, add a reference to the app in the INSTALLED_APPS
 In Settings.py module, in array INSTALLED_APPS = [ ..., 'tasks']  add <new_apps> at end.
 ```
 ![img.png](images/include_apps.png)
-### To create `requirements.txt` use:
+
+### - To create *<requirements.txt>* use:
 ```
 pip freeze > requirements.txt
 ```
-Install requirements
+### - Install requirements
 ```aiignore
 pip install -r requirement.txt
 ```
-### Additional pip commands
+### - Additional pip commands
 ```aiignore
 pip install <package_name>          	  # Install a package
 pip uninstall <package_name>        	  #  Uninstall a package
@@ -188,7 +189,7 @@ pip install --upgrade <package_name>  	  # Upgrade a specific package
 python manage.py createsuperuser
 ```
 
-### Django dbshell
+### - Django dbshell
 
 - An interactive command-line interface shell environment
 - A very useful tool for SQL database debugging when working on a Django application
@@ -204,5 +205,16 @@ or on your path"
 using Django dbshell - Queries
 ```
 SELECT * FROM <table_name>;
+```
+Zip on mac/linux
+```aiignore
+zip -r project.zip . -x "*.idea*" -x "*.venv*" -x "*__pycache__*"
+```
+Zip on Windows
+```aiignore
+Get-ChildItem -Path . -Recurse -Force |
+  Where-Object { $_.FullName -notmatch "\.idea|\.venv|__pycache__" } |
+  Compress-Archive -DestinationPath .\project.zip
+
 ```
 ---
