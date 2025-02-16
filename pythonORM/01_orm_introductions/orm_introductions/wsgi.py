@@ -1,5 +1,5 @@
 """
-WSGI config for orm_introductions project.
+WSGI config for 01_orm_introductions project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'orm_introductions.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', '01_orm_introductions.settings')
 
 application = get_wsgi_application()
