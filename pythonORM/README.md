@@ -206,6 +206,7 @@ using Django dbshell - Queries
 ```
 SELECT * FROM <table_name>;
 ```
+### - Create packege
 Zip on mac/linux
 ```aiignore
 zip -r project.zip . -x "*.idea*" -x "*.venv*" -x "*__pycache__*"
