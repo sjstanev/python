@@ -1,0 +1,24 @@
+body {
+    height: 75%;
+    width: 1200px;
+    /*display: flex;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center_content{
+    display: -o-flex;
+    background-color: grey;
+    color: white;
+    border: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.center_table{
+    display: -o-flex;
+    background-color: grey;
+    color: white;
+    text-align: center;
+}

@@ -1,7 +1,7 @@
 # Python ORM
 
-Object-Relational Mapping (ORM) allows manipulating databases using common classes and objects\▪ Provides a layer of abstraction that hides the complexity of the
-database schema and relationships
+Object-Relational Mapping (ORM) allows manipulating databases using common classes and objects.
+Provides a layer of abstraction that hides the complexity of the database schema and relationships
 ### - Benefits of ORM
 - Can automate some common tasks:
   - Creating, updating, and deleting records
