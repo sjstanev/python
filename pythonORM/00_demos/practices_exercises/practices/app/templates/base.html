@@ -13,15 +13,15 @@
 </head>
 <body>
 
-<p class="center_content">Some Text</p>
+<p class="center_content">Page Static Content</p>
 <div class="center_content">
     <div class="position-relative p-3 mb-2 bg-dark text-white">
         <div class="row g-3 align-items-center">
             <div class="col text-center">
-                <p>Hello from HTML</p>
+                <p>Django HTML Template</p>
             </div>
             <div class="col text-center">
-                This is ENV_VARIABLE: {{name}}
+                ENV_VARIABLE: {{is_object}}
             </div>
         </div>
         <div class="center_content">
@@ -33,18 +33,26 @@
                         <th scope="col">Age</th>
                         <th scope="col">Job</th>
                     </tr>
-                    {% for user in users %}
-
+                    <!-- check whether the return from result is Object Instances or QuerySET -->
+                    {% if is_object %}
                     <tr>
-                        <td>{{user.id}}</td>
-                        <td>{{user.name}}</td>
-                        <td>{{user.age}}</td>
-                        <td>{{user.job}}</td>
+                        <td>{{users.id}}</td>
+                        <td>{{users.name}}</td>
+                        <td>{{users.age}}</td>
+                        <td>{{users.job}}</td>
                     </tr>
-                    {% endfor %}
+                    {% else %}
+                        {% for user in users %}
+                        <tr>
+                            <td>{{user.id}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.age}}</td>
+                            <td>{{user.job}}</td>
+                        </tr>
+                        {% endfor %}
+                    {% endif %}
                 </table>
             </div>
-
         </div>
     </div>
 </div>

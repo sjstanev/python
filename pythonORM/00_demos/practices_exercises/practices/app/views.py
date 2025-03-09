@@ -9,8 +9,14 @@ def index(request):
     return HttpResponse("Hello, world. Directly from Django")
 
 def base(request):
-    name = "some_variable"
-    # users = TempData.objects.all()
-    users = TempData.objects.filter(id=2)
-    print(users)
-    return render(request, 'base.html', {'name': name, 'users': users})
+    is_object = False
+    users = TempData.objects.all()
+    #users = TempData.objects.get(id=1)
+    # users = TempData.objects.filter(id=2)
+
+
+    if  isinstance(users, TempData):
+        print(users.id, users.name, users.age, users.job)
+        is_object = True
+
+    return render(request, 'base.html', {'users': users, 'is_object':is_object})
