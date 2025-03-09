@@ -1,6 +1,6 @@
 # Django Migrations and Django Admin
 - [Django Migrations Advanced](#django-migrations-advanced)
-- [Django Admin Site](#django-admin-site])
+- [Django Admin Site](#django-admin-site)
 
 
 ## Django Migrations Advanced
