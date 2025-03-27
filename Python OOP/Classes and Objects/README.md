@@ -3,7 +3,7 @@
 - [Project Architecture](#project-architecture)
 - [Scope and Namespaces](#scope-and-namespaces)
 - [Basic of OOP](#basic-of-oop)
-- [Creating and Using Classes](#creating-and-using-classess)
+- [Creating and Using Classes](#creating-and-using-classes)
 
 ## Project Architecture
 Splitting Code into Logical Parts
