@@ -151,7 +151,7 @@ print(numbers) # Error
   - The task that an object performs
   - A phone could turn on, turn off
   - 
-### What is ac Class?
+### What is a Class?
 - The class is a `blueprint that defines the nature` of a future object
 - In Python, a class is created by keyword class
 ```editorconfig
