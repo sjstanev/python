@@ -17,19 +17,19 @@ class Stack:
         return self.data == []
 
     def __str__(self) -> str:
-        result = ', '.join(map(str, reversed(self.data)))
+        result = "[" + ', '.join(reversed(self.data)) + "]"
         return result
 
 
 s = Stack()
 print(s.is_empty())
 print(s.data)
-print(s.push("a"))
-print(s.push("b"))
-print(s.push("c"))
+s.push("a")
+s.push("b")
+s.push("c")
 print(s.is_empty())
 print(s.data)
-print(s.top())
+print(s)
 print(s.pop())
-print(s.data)
+print(s)
 print(s.top())
