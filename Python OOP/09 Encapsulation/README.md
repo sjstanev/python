@@ -2,10 +2,10 @@
 # Encapsulation
 Benefits of Encapsulation
 
-- [Encapsulation Definition](#encapsulation_definition)
-- [Name Mangling a Variable](#name_mangling_a_variable)
-- [Name Mangling a Method](#name_mangling_a_method)
-- [Built-in Functions for Accessing Attributes](#built_in_functions_for_accessing_attributes)
+- [Encapsulation Definition](#encapsulation-definition)
+- [Name Mangling a Variable](#name-mangling-a-variable)
+- [Name Mangling a Method](#name-mangling-a-method)
+- [Built-in Functions for Accessing Attributes](#built-in-functions-for-accessing-attributes)
 
 ## Encapsulation Definition
 ### What is Encapsulation?
