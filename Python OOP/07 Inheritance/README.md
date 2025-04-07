@@ -1,5 +1,3 @@
-from urllib.parse import ParseResultfrom ast import Param
-
 # Inheritance
 Capability to Inherit Other Properties
 
