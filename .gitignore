@@ -4,4 +4,5 @@
 Exercise/
 .practices/
 .mda/
-.zip
+*.zip
+__pycache__
